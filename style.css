@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --primary-bg: #f3f3f3;
+  --accent-green: #6caa97;
+  --accent-yellow: #d9e05e;
+  --accent-purple: #c95bc7;
+  --dark-section: #191a23;
+
+  --dark-teal: #004b61;
+  --light-grey: #ebe8e6;
+  --brand-yellow: #d9e05e;
+  --brand-orange: #f05a28;
+  --btn-teal: #005a74;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+}
+nav {
+  background-color: var(--primary-bg);
+  padding: 20px 0;
+  .navbar-logo {
+    width: 84px;
+  }
+}
+
+.section-title {
+  background-color: var(--accent-green);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.benefit-card {
+  border: 1px solid #000;
+  border-bottom: 5px solid #000;
+  border-radius: 20px;
+  transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-yellow {
+  background-color: var(--accent-yellow);
+}
+
+.accordion-item {
+  border: 1px solid #000 !important;
+  overflow: hidden;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--accent-yellow);
+  color: black;
+}
+
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #005877;
+  /* Dark */
+  border: 1px solid #191a23;
+  border-radius: 14px;
+  font-size: 20px;
+  padding: 10px 25px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+  border: none;
+  border-radius: 12px;
+}
+
+.btn-secondary {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  text-align: center;
+
+  color: #1a1a08;
+
+  padding: 10px 25px;
+
+  background: #d1d140;
+  border-radius: 14px;
+}
+.hero-img {
+  border-radius: 20px;
+
+  /* border: 9px dashed #d1d140; */
+  border-radius: 53px;
+}
+
+.btn-orange {
+  background-color: #ff8a00;
+  color: white;
+}
+
+.cta-banner {
+  background-color: var(--light-grey);
+}
+.btn-teal {
+  background-color: var(--dark-teal);
+  color: white;
+  border-radius: 12px;
+}
+
+/* Section 2: Expectations */
+.expectations-container {
+  background-color: var(--dark-teal);
+}
+.section-highlight {
+  background-color: var(--brand-yellow);
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.highlight-box {
+  background-color: var(--brand-yellow);
+  color: var(--dark-teal);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.expectation-column {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.text-orange {
+  color: var(--brand-orange);
+}
+.learn-more-yellow {
+  color: var(--brand-yellow);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #d96512 !important;
+  box-shadow: 0px 5px 0px #d96512 !important;
+  border-radius: 45px;
+}
+/* Section 3: Testimonials */
+.testimonials-container {
+  background-color: var(--dark-teal);
+}
+.testimonial-bubble {
+  border: 1.5px solid var(--brand-yellow);
+  border-radius: 40px;
+  background-color: #191a23; /* Dark bubble background */
+  position: relative;
+}
+/* The "Tail" of the speech bubble */
+.testimonial-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: #191a23;
+  border-right: 1.5px solid var(--brand-yellow);
+  border-bottom: 1.5px solid var(--brand-yellow);
+  transform: rotate(45deg);
+}
+.text-yellow {
+  color: var(--brand-yellow);
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35"/></svg>');
+  mask-repeat: no-repeat;
+  display: inline-block;
+}
+.dot.active {
+  background-color: var(--brand-yellow);
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+  .expectation-column {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
