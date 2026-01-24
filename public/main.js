@@ -4,5 +4,3 @@ document.querySelectorAll('.acc-header').forEach((h) => {
     item.classList.toggle('active');
   });
 });
-
-alert('Hey from Github!');
