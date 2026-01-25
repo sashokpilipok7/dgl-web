@@ -35,6 +35,13 @@ h6 {
 img {
   max-width: 100%;
 }
+
+a:focus,
+a:active,
+button:focus,
+button:active {
+  background: transparent !important;
+}
 nav {
   background-color: var(--primary-bg);
   padding: 20px 0;
@@ -56,6 +63,12 @@ nav {
   border-bottom: 5px solid #000;
   border-radius: 20px;
   transition: transform 0.2s;
+  .card-title {
+    border-radius: 20px;
+    padding: 3px;
+    width: fit-content;
+    white-space: nowrap;
+  }
 }
 
 .benefit-card:hover {
@@ -64,6 +77,23 @@ nav {
 
 .card-yellow {
   background-color: var(--accent-yellow);
+  .card-title {
+    background-color: white;
+  }
+}
+
+.card-grey {
+  background-color: #eae4e4;
+  .card-title {
+    background-color: var(--accent-yellow);
+  }
+}
+
+.card-blue {
+  background-color: #005877;
+  .card-title {
+    background-color: white;
+  }
 }
 
 .accordion-item {
@@ -95,6 +125,9 @@ nav {
   flex-grow: 0;
   border: none;
   border-radius: 12px;
+  &:hover {
+    background-color: #004b61;
+  }
 }
 
 .btn-secondary {
@@ -112,6 +145,9 @@ nav {
   background: #d1d140;
   border-radius: 14px;
 }
+.btn-secondary:hover {
+  background-color: #b3b339;
+}
 .hero-img {
   border-radius: 20px;
 
@@ -122,6 +158,9 @@ nav {
 .btn-orange {
   background-color: #ff8a00;
   color: white;
+  &:hover {
+    background-color: #d96512;
+  }
 }
 
 .cta-banner {
@@ -131,6 +170,9 @@ nav {
   background-color: var(--dark-teal);
   color: white;
   border-radius: 12px;
+  &:hover {
+    background-color: #005a74;
+  }
 }
 
 /* Section 2: Expectations */
@@ -209,12 +251,53 @@ nav {
   background-color: var(--brand-yellow);
 }
 
+.about__left {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+.benefit-card {
+  .btn-icon {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    /* Black */
+    color: #000000;
+  }
+}
+
+.card-img-top {
+  height: 480px;
+  object-fit: cover;
+}
+
 /* Mobile fixes */
 @media (max-width: 768px) {
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .about__left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   .expectation-column {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 20px;
     margin-bottom: 20px;
+  }
+  .card-img-top {
+    height: 380px;
+    object-fit: cover;
   }
 }

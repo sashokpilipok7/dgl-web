@@ -25,14 +25,13 @@
             <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="#">Заповнити заявку</a></li>
           </ul>
         </div>
-        <ul></ul>
       </div>
     </nav>
 
     <header class="py-5">
-      <div class="container">
+      <div class="container" id="program">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6 about__left">
             <h1 class="display-4 fw-bold">
               Програма <br class="d-none d-md-block" />
               Developing Global<br class="d-none d-md-block" />
@@ -57,10 +56,50 @@
       <div class="container">
         <h2 class="section-title mb-5">Переваги</h2>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="card h-100 benefit-card card-grey">
+              <div class="card-body">
+                <h4 class="card-title">Стипендія 200$</h4>
+                <a href="#" class="btn-icon">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
             <div class="card h-100 benefit-card card-yellow">
               <div class="card-body">
-                <h3 class="card-title">Стипендія 200$</h3>
+                <h4 class="card-title">Служіння молоді</h4>
+                <a href="#" class="btn-icon">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card h-100 benefit-card card-blue">
+              <div class="card-body">
+                <h4 class="card-title">Конференції та тренінги</h4>
+                <a href="#" class="btn-icon">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card h-100 benefit-card card-grey">
+              <div class="card-body">
+                <h4 class="card-title">Менторська підтримка</h4>
+                <a href="#" class="btn-icon">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card h-100 benefit-card card-yellow">
+              <div class="card-body">
+                <h4 class="card-title">Класне ком'юніті</h4>
+                <a href="#" class="btn-icon">Дізнатися більше</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card h-100 benefit-card card-blue">
+              <div class="card-body">
+                <h4 class="card-title">Зв'язок із донорами</h4>
                 <a href="#" class="btn-icon">Дізнатися більше</a>
               </div>
             </div>
@@ -85,7 +124,7 @@
       </div>
     </section>
 
-    <section class="container my-5">
+    <section class="container my-5" id="expectations">
       <h2 class="section-highlight mb-5">Наші очікування</h2>
 
       <div class="expectations-container p-5 rounded-5 text-white">
@@ -146,6 +185,24 @@
               </div>
             </div>
           </div>
+          <div class="col-md-4 mb-4">
+            <div class="card profile-card border-0 shadow-sm">
+              <img src="img/team_2.jpg" class="card-img-top p-3 rounded-circle-custom" alt="Student" />
+              <div class="card-body">
+                <h5 class="fw-bold">Левандовська Крістіна</h5>
+                <p class="text-muted small">Лідер з Кам'янець-Подільського</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card profile-card border-0 shadow-sm">
+              <img src="img/team_3.JPG" class="card-img-top p-3 rounded-circle-custom" alt="Student" />
+              <div class="card-body">
+                <h5 class="fw-bold">Бортек Єгор</h5>
+                <p class="text-muted small">Лідер з Золотоноші</p>
+              </div>
+            </div>
+          </div>
         </div>
         <button class="btn btn-primary mt-4 px-5">Всі студенти</button>
       </div>
@@ -165,7 +222,7 @@
             </div>
 
             <div class="ms-4">
-              <h5 class="mb-0 text-yellow fw-bold">John Smith</h5>
+              <h5 class="mb-0 text-yellow fw-bold">Катя Шпак</h5>
               <p class="small text-white opacity-75">Marketing Director at XYZ Corp</p>
             </div>
           </div>
@@ -178,7 +235,7 @@
             </div>
 
             <div class="ms-4">
-              <h5 class="mb-0 text-yellow fw-bold">John Smith</h5>
+              <h5 class="mb-0 text-yellow fw-bold">Євген</h5>
               <p class="small text-white opacity-75">Marketing Director at XYZ Corp</p>
             </div>
           </div>
@@ -191,7 +248,7 @@
             </div>
 
             <div class="ms-4">
-              <h5 class="mb-0 text-yellow fw-bold">John Smith</h5>
+              <h5 class="mb-0 text-yellow fw-bold">Олександр Гусаков</h5>
               <p class="small text-white opacity-75">Marketing Director at XYZ Corp</p>
             </div>
           </div>
@@ -221,9 +278,9 @@
           </div>
           <div class="col-lg-8">
             <div class="newsletter-box p-4 rounded bg-secondary-dark">
-              <form class="row g-2">
+              <form class="row g-2" id="subscribe">
                 <div class="col-md-8">
-                  <input type="email" class="form-control" placeholder="Email" />
+                  <input required type="email" class="form-control" placeholder="Email" />
                 </div>
                 <div class="col-md-4">
                   <button type="submit" class="btn btn-orange w-100">Підписатися на новини</button>
