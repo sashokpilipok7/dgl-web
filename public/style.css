@@ -102,8 +102,15 @@ nav {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: var(--accent-yellow);
+  background-color: var(--accent-yellow) !important;
   color: black;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #babf51 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(186, 191, 81, 0.5) !important;
 }
 
 .step-number {
@@ -212,6 +219,9 @@ nav {
   border: 1px solid #d96512 !important;
   box-shadow: 0px 5px 0px #d96512 !important;
   border-radius: 45px;
+  img {
+    border-radius: 45px;
+  }
 }
 /* Section 3: Testimonials */
 .testimonials-container {
@@ -275,6 +285,11 @@ nav {
 .card-img-top {
   height: 480px;
   object-fit: cover;
+}
+
+.steps-section {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Mobile fixes */
