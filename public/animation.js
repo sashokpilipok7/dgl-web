@@ -1,5 +1,5 @@
 const mainTitle = document.querySelector('.anime-type');
-const textToDisplay = 'Leaders в Україні';
+const textToDisplay = 'Leaders (DGL) ';
 const animeBr = document.querySelector('.anime-br');
 
 function animateTitle(element, text, delay = 100) {

@@ -63,11 +63,39 @@ nav {
   border-bottom: 5px solid #000;
   border-radius: 20px;
   transition: transform 0.2s;
+  font-size: 18px;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img {
+      width: 50%;
+      margin: 20px auto;
+    }
+    .btn-icon {
+      text-align: center;
+    }
+  }
   .card-title {
     border-radius: 20px;
     padding: 3px;
     width: fit-content;
     white-space: nowrap;
+  }
+
+  .card-text {
+    display: none;
+  }
+
+  .card-text.active {
+    display: block;
+    position: absolute;
+    /* animation: anime-more 1s forwards; */
+  }
+
+  .card-text.active + img {
+    visibility: hidden;
   }
 }
 
@@ -290,6 +318,12 @@ nav {
 .steps-section {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.expectations-container {
+  b {
+    color: #d9e05e;
+  }
 }
 
 /* Mobile fixes */
