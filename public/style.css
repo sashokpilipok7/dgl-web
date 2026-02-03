@@ -369,4 +369,11 @@ nav {
     margin-left: 0;
     width: 100%;
   }
+  .benefit-card {
+    .btn-icon {
+      margin-top: 8px;
+      text-align: center;
+      display: block;
+    }
+  }
 }
