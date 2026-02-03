@@ -366,6 +366,7 @@ nav {
     object-fit: cover;
   }
   .carousel-item .testimonial-col {
+    margin-left: 0;
     width: 100%;
   }
 }
