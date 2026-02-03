@@ -255,6 +255,13 @@ nav {
 .testimonials-container {
   background-color: var(--dark-teal);
 }
+
+.carousel-item .testimonial-col {
+  float: left;
+  width: 30%;
+  margin-left: 3%;
+}
+
 .testimonial-bubble {
   border: 1.5px solid var(--brand-yellow);
   border-radius: 40px;
@@ -326,8 +333,17 @@ nav {
   }
 }
 
+@media (max-width: 1201px) {
+  .carousel-inner .testimonial-col:last-child {
+    display: none;
+  }
+  .carousel-item .testimonial-col {
+    width: 42%;
+  }
+}
+
 /* Mobile fixes */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   h2 {
     width: 100%;
     text-align: center;
@@ -348,5 +364,8 @@ nav {
   .card-img-top {
     height: 380px;
     object-fit: cover;
+  }
+  .carousel-item .testimonial-col {
+    width: 100%;
   }
 }

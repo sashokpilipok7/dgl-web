@@ -22,3 +22,12 @@ benefitsMoreLinks.forEach((link) => {
     textToShow.classList.toggle('active');
   });
 });
+
+const menu = document.querySelector('#navbarNav');
+const nav_items_internal = document.querySelectorAll('.nav-item a');
+
+nav_items_internal.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    menu.classList.remove('show');
+  });
+});
