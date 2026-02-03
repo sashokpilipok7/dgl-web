@@ -10,5 +10,27 @@ function animateTitle(element, text, delay = 100) {
     }, delay * i);
   }
 }
-
 animateTitle(mainTitle, textToDisplay);
+
+const restTitles = document.querySelectorAll('section h2');
+const animateOnScroll = (targets) => {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          //triger animation
+          animateTitle(entry.target, entry.target.dataset.text);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  ); // Trigger when 15% of element is visible
+
+  // Attach observer to targets
+  if (targets.length) {
+    targets.forEach((t) => observer.observe(t));
+  }
+};
+
+animateOnScroll(restTitles);
