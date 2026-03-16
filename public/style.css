@@ -12,6 +12,9 @@
   --brand-yellow: #d9e05e;
   --brand-orange: #f05a28;
   --btn-teal: #005a74;
+
+  --bs-link-hover-color-rgb: #004b61;
+  --bs-btn-hover-color: #004b61;
 }
 
 * {
@@ -79,7 +82,7 @@ nav {
   }
   .card-title {
     border-radius: 20px;
-    padding: 3px;
+    padding: 4px 12px;
     width: fit-content;
     white-space: nowrap;
   }
@@ -148,20 +151,45 @@ nav {
 
 .btn-primary {
   background: #005877;
-  /* Dark */
-  border: 1px solid #191a23;
-  border-radius: 14px;
-  font-size: 20px;
-  padding: 10px 25px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 4;
-  flex-grow: 0;
   border: none;
   border-radius: 12px;
+  font-size: 20px;
+  padding: 10px 25px;
+  color: #fff;
   &:hover {
     background-color: #004b61;
+    color: #fff;
+  }
+  &:focus,
+  &:focus-visible {
+    background-color: #004b61;
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 88, 119, 0.4);
+    outline: none;
+  }
+  &:active {
+    background-color: #003d50 !important;
+    color: #fff !important;
+  }
+}
+
+.btn-outline-primary {
+  color: #005877;
+  border-color: #005877;
+  &:hover {
+    background-color: #005877;
+    border-color: #005877;
+    color: #fff;
+  }
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(0, 88, 119, 0.4);
+    outline: none;
+  }
+  &:active {
+    background-color: #003d50 !important;
+    border-color: #003d50 !important;
+    color: #fff !important;
   }
 }
 
@@ -321,6 +349,10 @@ nav {
 
     /* Black */
     color: #000000;
+
+    display: inline-block;
+    width: 100%;
+    text-align: center;
   }
   .btn-icon:hover {
     color: white;
@@ -345,6 +377,17 @@ nav {
 
 .students-section .row{
   align-items: stretch;
+  .card{
+    height: 100%;
+    position: relative;
+    padding-bottom: 32px;
+    a{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @media (max-width: 1201px) {
