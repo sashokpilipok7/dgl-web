@@ -211,11 +211,24 @@ nav {
 .btn-secondary:hover {
   background-color: #b3b339;
 }
-.hero-img {
-  border-radius: 20px;
+.hero-img-wrap {
+  position: relative;
+}
 
-  /* border: 9px dashed #d1d140; */
+.hero-img {
   border-radius: 53px;
+  display: block;
+  width: 100%;
+  transition: opacity 1.2s ease-in-out;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-img-wrap img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .btn-orange {
@@ -229,6 +242,53 @@ nav {
 .cta-banner {
   background-color: var(--light-grey);
 }
+
+.cta-banner h2{
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.cta-banner .abstract-illustration {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  img{
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.cta-photo {
+  border-radius: 20px;
+  transition: opacity 1.2s ease-in-out;
+  display: block;
+  width: 100%;
+}
+
+.cta-photo:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cta-text {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.cta-warning {
+  color: #b8960c;
+  font-size: 1rem;
+  background: #fffbe6;
+  border-left: 4px solid #d9a800;
+  border-radius: 8px;
+  padding: 10px 16px;
+ 
+}
+
 .btn-teal {
   background-color: var(--dark-teal);
   color: white;
@@ -375,13 +435,13 @@ nav {
   }
 }
 
-.students-section .row{
+.students-section .row {
   align-items: stretch;
-  .card{
+  .card {
     height: 100%;
     position: relative;
     padding-bottom: 32px;
-    a{
+    a {
       position: absolute;
       bottom: 20px;
       left: 50%;
