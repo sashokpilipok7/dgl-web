@@ -38,9 +38,8 @@ const studentCards = document.querySelectorAll('.students-section .col-md-4 ');
 
 showMoreBtn.addEventListener('click', () => {
   const hiddenCards = document.querySelectorAll('.students-section .col-md-4.d-none');
-  if (hiddenCards.length === 0) {
+  if (hiddenCards.length === 0 || hiddenCards.length <= 3) {
     showMoreBtn.classList.add('d-none');
-    return;
   }
 
   studentCards.forEach((card) => {
