@@ -61,6 +61,9 @@ nav {
   border-radius: 8px;
   font-weight: bold;
 }
+#benefits .row{
+  justify-content: center;
+}
 
 .benefits-desc{
   text-align: justify;
@@ -129,6 +132,9 @@ nav {
   background-color: #005877;
   .card-title {
     background-color: white;
+  }
+  .card-text{
+    color: white;
   }
 }
 
