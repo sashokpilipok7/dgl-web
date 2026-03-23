@@ -10,7 +10,11 @@ function animateTitle(element, text, delay = 100) {
     }, delay * i);
   }
 }
-animateTitle(mainTitle, textToDisplay);
+try {
+  animateTitle(mainTitle, textToDisplay);
+} catch (e) {
+  console.error('animateTitle error:', e);
+}
 
 const restTitles = document.querySelectorAll('section h2');
 const animateOnScroll = (targets) => {
@@ -33,7 +37,11 @@ const animateOnScroll = (targets) => {
   }
 };
 
-animateOnScroll(restTitles);
+try {
+  animateOnScroll(restTitles);
+} catch (e) {
+  console.error('animateOnScroll error:', e);
+}
 
 function startCrossfade(layer1Id, layer2Id, images, interval = 4000) {
   const layer1 = document.getElementById(layer1Id);
@@ -60,26 +68,30 @@ function startCrossfade(layer1Id, layer2Id, images, interval = 4000) {
   }, interval);
 }
 
-startCrossfade('hero-layer-1', 'hero-layer-2', [
-  'img/banner/one.JPG',
-  'img/hero.jpg',
-  'img/banner/two.JPG',
-  'img/banner/three.jpg',
-  'img/banner/five.JPG',
-  'img/banner/six.JPG',
-  'img/banner/seven.WEBP',
-]);
+try {
+  startCrossfade('hero-layer-1', 'hero-layer-2', [
+    'img/banner/one.JPG',
+    'img/hero.jpg',
+    'img/banner/two.JPG',
+    'img/banner/three.jpg',
+    'img/banner/five.JPG',
+    'img/banner/six.JPG',
+    'img/banner/seven.WEBP',
+  ]);
 
-startCrossfade(
-  'cta-layer-1',
-  'cta-layer-2',
-  [
-    'img/students/nadia.jpg',
-    'img/students/alisa.JPG',
-    'img/students/dima.jpg',
-    'img/students/alisa2.JPG',
-    'img/students/julia.jpg',
-    'img/students/danic.jpg',
-  ],
-  5000
-);
+  startCrossfade(
+    'cta-layer-1',
+    'cta-layer-2',
+    [
+      'img/students/nadia.jpg',
+      'img/students/alisa.JPG',
+      'img/students/dima.jpg',
+      'img/students/alisa2.JPG',
+      'img/students/julia.jpg',
+      'img/students/danic.jpg',
+    ],
+    5000
+  );
+} catch (e) {
+  console.error('Animation CrossFade error:', e);
+}

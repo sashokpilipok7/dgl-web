@@ -1,48 +1,62 @@
-document.querySelectorAll('.acc-header').forEach((h) => {
-  h.addEventListener('click', () => {
-    const item = h.parentElement;
-    item.classList.toggle('active');
+try {
+  document.querySelectorAll('.acc-header').forEach((h) => {
+    h.addEventListener('click', () => {
+      const item = h.parentElement;
+      item.classList.toggle('active');
+    });
   });
-});
+} catch (e) {
+  console.error('Accordion init error:', e);
+}
 
-document.querySelector('#subscribe').addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Підписка успішна!');
-});
+try {
+  const benefitsMoreLinks = document.querySelectorAll('#benefits .btn-icon');
 
-const benefitsMoreLinks = document.querySelectorAll('#benefits .btn-icon');
+  benefitsMoreLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
 
-benefitsMoreLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
+      const card = link.parentElement;
+      const textToShow = card.querySelector('.card-text');
 
-    const card = link.parentElement;
-    const textToShow = card.querySelector('.card-text');
-
-    textToShow.classList.toggle('active');
+      textToShow.classList.toggle('active');
+    });
   });
-});
+} catch (e) {
+  console.error('Benefits links init error:', e);
+}
 
-const menu = document.querySelector('#navbarNav');
-const nav_items_internal = document.querySelectorAll('.nav-item a');
+try {
+  const menu = document.querySelector('#navbarNav');
+  const nav_items_internal = document.querySelectorAll('.nav-item a');
 
-nav_items_internal.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    menu.classList.remove('show');
+  nav_items_internal.forEach((item) => {
+    item.addEventListener('click', () => {
+      menu.classList.remove('show');
+    });
   });
-});
+} catch (e) {
+  console.error('Nav menu init error:', e);
+}
 
-const showMoreBtn = document.querySelector('.btn-more-student');
-const studentCards = document.querySelectorAll('.students-section .col-md-4 ');
-// const studentVisibleCards = document.querySelectorAll('.students-section .col-md-4:not(.d-none)');
+try {
+  const showMoreBtn = document.querySelector('.btn-more-student');
+  const studentCards = document.querySelectorAll('.students-section .col-md-4 ');
 
-showMoreBtn.addEventListener('click', () => {
-  const hiddenCards = document.querySelectorAll('.students-section .col-md-4.d-none');
-  if (hiddenCards.length === 0 || hiddenCards.length <= 3) {
-    showMoreBtn.classList.add('d-none');
-  }
+  showMoreBtn.addEventListener('click', () => {
+    try {
+      const hiddenCards = document.querySelectorAll('.students-section .col-md-4.d-none');
+      if (hiddenCards.length === 0 || hiddenCards.length <= 3) {
+        showMoreBtn.classList.add('d-none');
+      }
 
-  studentCards.forEach((card) => {
-    card.classList.remove('d-none');
+      studentCards.forEach((card) => {
+        card.classList.remove('d-none');
+      });
+    } catch (err) {
+      console.error('Show more students click error:', err);
+    }
   });
-});
+} catch (e) {
+  console.error('Show more students init error:', e);
+}
